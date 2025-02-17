@@ -1,12 +1,12 @@
-📌 Project Overview
+#📌 Project Overview
 This is a file upload system built using CodeIgniter 3 (CI3) with AJAX integration. It allows users to upload image (jpg, jpeg, png, gif) and PDF files (pdf) with a maximum size of 2MB.
 
-The admin panel provides features to:
+#The admin panel provides features to:
 ✔️ View uploaded files
 ✔️ Download files
 ✔️ Delete files
 
-📂 Features
+#📂 Features
 AJAX-based file upload to reduce page reloads
 File validation (allowed types: images & PDFs, max size: 2MB)
 Secure file storage with encrypted filenames
@@ -14,7 +14,7 @@ Admin panel to manage uploaded files
 File preview for images and PDFs
 Dynamic deletion of files using AJAX
 
-🏗️ Project Structure
+#🏗️ Project Structure
 /application
   /controllers
     - Upload.php   # Handles file uploads
@@ -27,7 +27,7 @@ Dynamic deletion of files using AJAX
 /uploads/  # Directory to store uploaded files
 /assets/   # CSS, JS, Bootstrap
 
-📜 Database Structure
+#📜 Database Structure
 Create a table named uploads in MySQL:
 sql
 CREATE TABLE uploads (
@@ -39,7 +39,7 @@ CREATE TABLE uploads (
   uploaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-🚀 Installation & Setup
+#🚀 Installation & Setup
 Clone the repository:
 git clone https://github.com/yourusername/your-repo.git
 cd your-repo
@@ -52,22 +52,23 @@ Import the uploads table into your MySQL database.
 
 Run the project on localhost (e.g., using XAMPP or Apache).
 
-🔧 Usage
+#🔧 Usage
 Upload Page: http://yourdomain.com/upload
 Admin Panel: http://yourdomain.com/admin
 
-🎯 Technologies Used
+#🎯 Technologies Used
 CodeIgniter 3 (PHP framework)
 MySQL (Database)
 AJAX & jQuery (Dynamic content loading)
 Bootstrap 5 (UI styling)
-🛡️ Security Measures
+
+#🛡️ Security Measures
 Restricts file types to images & PDFs
 Encrypts file names before storing
 Prevents direct script access
 
-📩 Contributions
+#📩 Contributions
 Feel free to fork, clone, and submit pull requests. 🚀
 
-📜 License
+#📜 License
 This project is open-source and available under the MIT License.
