@@ -1,71 +1,73 @@
-###################
-What is CodeIgniter
-###################
+📌 Project Overview
+This is a file upload system built using CodeIgniter 3 (CI3) with AJAX integration. It allows users to upload image (jpg, jpeg, png, gif) and PDF files (pdf) with a maximum size of 2MB.
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+The admin panel provides features to:
+✔️ View uploaded files
+✔️ Download files
+✔️ Delete files
 
-*******************
-Release Information
-*******************
+📂 Features
+AJAX-based file upload to reduce page reloads
+File validation (allowed types: images & PDFs, max size: 2MB)
+Secure file storage with encrypted filenames
+Admin panel to manage uploaded files
+File preview for images and PDFs
+Dynamic deletion of files using AJAX
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+🏗️ Project Structure
+/application
+  /controllers
+    - Upload.php   # Handles file uploads
+    - Admin.php    # Manages uploaded files (view, download, delete)
+  /models
+    - Upload_model.php  # Database interactions
+  /views
+    - upload_form.php  # User file upload form with AJAX
+    - admin_files.php  # Admin panel to manage files
+/uploads/  # Directory to store uploaded files
+/assets/   # CSS, JS, Bootstrap
 
-**************************
-Changelog and New Features
-**************************
+📜 Database Structure
+Create a table named uploads in MySQL:
+sql
+CREATE TABLE uploads (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  file_name VARCHAR(255) NOT NULL,
+  file_type VARCHAR(50) NOT NULL,
+  file_size FLOAT NOT NULL,
+  file_path VARCHAR(255) NOT NULL,
+  uploaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+🚀 Installation & Setup
+Clone the repository:
+git clone https://github.com/yourusername/your-repo.git
+cd your-repo
+Configure database settings in application/config/database.php.
 
-*******************
-Server Requirements
-*******************
+Ensure the uploads/ folder is writable:
+chmod -R 777 uploads/
 
-PHP version 5.6 or newer is recommended.
+Import the uploads table into your MySQL database.
 
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
+Run the project on localhost (e.g., using XAMPP or Apache).
 
-************
-Installation
-************
+🔧 Usage
+Upload Page: http://yourdomain.com/upload
+Admin Panel: http://yourdomain.com/admin
 
-Please see the `installation section <https://codeigniter.com/userguide3/installation/index.html>`_
-of the CodeIgniter User Guide.
+🎯 Technologies Used
+CodeIgniter 3 (PHP framework)
+MySQL (Database)
+AJAX & jQuery (Dynamic content loading)
+Bootstrap 5 (UI styling)
+🛡️ Security Measures
+Restricts file types to images & PDFs
+Encrypts file names before storing
+Prevents direct script access
 
-*******
-License
-*******
+📩 Contributions
+Feel free to fork, clone, and submit pull requests. 🚀
 
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
-
-*********
-Resources
-*********
-
--  `User Guide <https://codeigniter.com/docs>`_
--  `Contributing Guide <https://github.com/bcit-ci/CodeIgniter/blob/develop/contributing.md>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
-
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
-
-***************
-Acknowledgement
-***************
-
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
+📜 License
+This project is open-source and available under the MIT License.
