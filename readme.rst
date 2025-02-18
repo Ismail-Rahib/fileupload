@@ -60,7 +60,7 @@ Create a table named **uploads** in MySQL:
 
 .. code-block:: bash
 
-    git clone https://github.com/yourusername/your-repo.git
+    git clone https://github.com/Ismail-Rahib/fileupload.git
     cd your-repo
 
 **Configure database settings in** ``application/config/database.php``.
@@ -77,8 +77,8 @@ Create a table named **uploads** in MySQL:
 
 🔧 Usage
 =========
-- **Upload Page**: `http://yourdomain.com/upload <http://yourdomain.com/upload>`_  
-- **Admin Panel**: `http://yourdomain.com/admin <http://yourdomain.com/admin>`_  
+- **Upload Page**: `http://localhost/fileupload/upload <http://yourdomain.com/upload>`_  
+- **Admin Panel**: `http://localhost/fileupload/admin <http://yourdomain.com/admin>`_  
 
 🎯 Technologies Used
 =====================
